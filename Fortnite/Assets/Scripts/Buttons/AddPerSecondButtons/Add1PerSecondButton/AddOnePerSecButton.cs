@@ -7,7 +7,7 @@ using System;
 public class AddOnePerSecButton : MonoBehaviour
 {
     public Click click;
-    public double addOnePerSecondPrice = 25;
+    public double addOnePerSecondPrice = 50;
     public SpriteRenderer buyButtonSpriteRenderer;
     public TextMeshProUGUI addOnePerSecondPriceText;
 
@@ -17,7 +17,7 @@ public class AddOnePerSecButton : MonoBehaviour
         {
             click.p = click.p + 1;
             click.Balls = click.Balls - addOnePerSecondPrice;
-            addOnePerSecondPrice = Math.Round(addOnePerSecondPrice * 1.5);
+            addOnePerSecondPrice = Math.Round(addOnePerSecondPrice * 1.15);
             StartCoroutine(doAnimation());
         }
     }

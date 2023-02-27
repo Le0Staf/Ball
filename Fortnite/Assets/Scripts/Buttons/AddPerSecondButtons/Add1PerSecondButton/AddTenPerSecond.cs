@@ -7,7 +7,7 @@ using System;
 public class AddTenPerSecond : MonoBehaviour
 {
     public Click click;
-    public double addTenPerSecondPrice = 1500;
+    public double addTenPerSecondPrice = 500;
     public SpriteRenderer buyButtonSpriteRenderer;
     public TextMeshProUGUI addTenPerSecondPriceText;
 
@@ -15,9 +15,9 @@ public class AddTenPerSecond : MonoBehaviour
     {
         if (click.Balls >= addTenPerSecondPrice)
         {
-            click.p = click.p + 1;
+            click.p = click.p + 10;
             click.Balls = click.Balls - addTenPerSecondPrice;
-            addTenPerSecondPrice = Math.Round(addTenPerSecondPrice * 1.5);
+            addTenPerSecondPrice = Math.Round(addTenPerSecondPrice * 1.15);
             StartCoroutine(doAnimation());
         }
     }

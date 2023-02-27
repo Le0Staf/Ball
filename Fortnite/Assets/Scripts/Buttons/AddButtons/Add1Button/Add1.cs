@@ -7,7 +7,7 @@ using TMPro;
 public class Add1 : MonoBehaviour
 {
     public Click click;
-    public double addOnePrice = 15;
+    public double addOnePrice = 100;
     public TextMeshProUGUI addOnePriceText;
     public SpriteRenderer buyButtonSpriteRenderer;
 
@@ -17,7 +17,7 @@ public class Add1 : MonoBehaviour
         {
             click.i = click.i + 1;
             click.Balls = click.Balls - addOnePrice;
-            addOnePrice = Math.Round(addOnePrice * 1.5);
+            addOnePrice = Math.Round(addOnePrice * 1.15);
             StartCoroutine(doAnimation());
         }
     }
